@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Scoreboard</title>
+    <style>
+        body {
+            background-color: rgba(0, 0, 0, 0.0);
+            font-family: Arial, sans-serif;
+            color: white;
+            padding: 20px;
+        }
+
+        .scoreboard {
+            max-width: 1000px;
+            margin: auto;
+            background: rgba(34, 34, 34, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .scoreboard h1 {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .scoreboard-table {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+        .scoreboard-main {
+            flex: 3;
+            max-height: 800px;
+            overflow-y: auto;
+        }
+        .scoreboard-jobs {
+            flex: 1;
+            margin-left: 24px;
+            background: #707070ce;
+            border-radius: 8px;
+            padding: 12px 10px;
+            min-width: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            height: fit-content;
+            position: sticky;
+            top: 40px;
+            align-self: flex-start;
+        }
+        .scoreboard-jobs-row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 18px;
+            min-height: 32px;
+        }
+        .scoreboard-job-entry {
+            font-size: 1.15em;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .scoreboard-heists {
+            flex: 1;
+            margin-left: 24px;
+            background: #707070ce;
+            border-radius: 8px;
+            padding: 12px 10px;
+            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            height: fit-content;
+            position: sticky;
+            top: 40px;
+            align-self: flex-start;
+        }
+        .scoreboard-heists-row {
+            min-height: 32px;
+            width: 100%;
+        }
+        .scoreboard-header, .player-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+        }
+        .scoreboard-header {
+            font-weight: bold;
+            border-bottom: 2px solid #555;
+            margin-bottom: 8px;
+        }
+        .player-row {
+            border-bottom: 1px solid #444;
+        }
+        .header-id, .player-id {
+            flex: 1;
+            text-align: left;
+        }
+        .header-name, .player-name {
+            flex: 2;
+            text-align: left;
+        }
+        .header-job, .player-job {
+            flex: 2;
+            text-align: left;
+        }
+    </style>
+</head>
+<body style="display: none;">
+    <div class="scoreboard">
+        <button class="close-btn" id="closeScoreboard" title="Close">&times;</button>
+        <!-- Server Banner/Logo -->
+        <div style="text-align:center; margin-bottom:16px;">
+            <img src="img/server-logo.png" alt="Server Logo" style="max-width:180px; max-height:180px; margin-bottom:8px;">
+            <div id="server-name-banner" style="font-size:22px; font-weight:bold; color:#fff; letter-spacing:1px;"></div>
+        </div>
+        <!-- End Server Banner/Logo -->
+        <!-- <h1>Scoreboard</h1> -->
+        <div class="scoreboard-table">
+            <div class="scoreboard-main">
+                <div class="scoreboard-header">
+                    <span class="header-id">Server ID</span>
+                    <span class="header-name">Player Name</span>
+                    <span class="header-job">Player Job</span>
+                </div>
+                <div id="players"></div>
+            </div>
+            <div class="scoreboard-jobs">
+                <div style="font-weight:bold; margin-bottom:8px;">Jobs</div>
+                <div class="scoreboard-jobs-row" id="jobs-list"></div>
+            </div>
+            <div class="scoreboard-heists">
+                <div style="font-weight:bold; margin-bottom:8px;">Heists</div>
+                <div class="scoreboard-heists-row" id="heists-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
