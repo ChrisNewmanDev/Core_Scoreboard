@@ -1,5 +1,5 @@
 Config = {}
-Config.ServerName = ""
+Config.ServerName = "Core RP"
 
 Config.Heists = {
     { name = 'House Robbery', id = 'house', minPD = 2, cooldown = 3600 },
@@ -23,7 +23,7 @@ Config.ShowJobs = {
     ['autopeace'] = true,
     ['flowcustoms'] = true,
     ['upnatom'] = true,
-    --['realestate'] = true,
+    ['realestate'] = true,
 }
 
 -- Order jobs are displayed in the scoreboard jobs column
@@ -33,17 +33,17 @@ Config.JobOrder = {
     'autopeace',
     'flowcustoms',
     'upnatom',
-    --'realestate',
+    'realestate',
 }
 
 -- Set custom colors for job names (CSS color values)
 Config.JobColors = {
     police = '#4a90e2',
     ambulance = '#e94e77',
-    autopeace = '#f5a623',
-    flowcustoms = '#f5a623',
+    lscustoms = '#f5a623',
+    bennys = '#f5a623',
     upnatom = '#f8e71c',
-    --realestate = '#7ed957',
+    realestate = '#7ed957',
 }
 
 -- Optional: Provide custom display names for jobs. If empty, the script will try
