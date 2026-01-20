@@ -1,3 +1,7 @@
+# Me
+Hello! If you’re enjoying the script and feel like supporting the work that went into it, consider buying me a coffee ☕
+https://buymeacoffee.com/core_scripts
+
 # core-scoreboard: Using the SetHeistInProgress Export
 
 To set a heist as in progress (and start its cooldown timer) from another script, use the following export call:
